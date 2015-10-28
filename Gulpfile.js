@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	minifyCss = require('gulp-minify-css'),
 	browserify = require('gulp-browserify'),
 	jsHint = require('gulp-jshint'),
+	babel = require('gulp-babel'),
 	uglify = require('gulp-uglify');
 
 gulp
@@ -26,6 +27,7 @@ gulp
 	.task('js', function() {
 		gulp
 			.src(['lib/**/*.js'])
+			.pipe(babel())
 			.pipe(jsHint())
 			.pipe(browserify({
 				insertGlobals: true,
