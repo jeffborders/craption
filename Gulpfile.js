@@ -45,13 +45,11 @@ gulp
 				]
 			}
 		});
+	})
+	.task('watch', function() {
+		gulp.watch(['styles/**/*.scss'], ['css']);
+		gulp.watch(['lib/**/*.js'], ['js']);
 	});
-
-
-gulp.task('watch', function() {
-	gulp.watch(['styles/**/*.scss'], ['css']);
-	gulp.watch(['lib/**/*.js'], ['js']);
-});
 
 // task runners
 gulp.task('default', ['build', 'connect', 'watch']);
