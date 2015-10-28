@@ -1,6 +1,6 @@
 # Craption README
 
-## A card game that pairs your witty captions to hilarious pics
+### A card game that pairs your witty captions to hilarious pics
 
 > The object of the game is create the wittiest caption for each 
 > picture in the deck and get your friends laughing so hard 
@@ -11,10 +11,19 @@
 > by posting YOUR funny pics and tagging @craptionthegame
 > or sending them directly to us!
 
-## (intentionally overly complicated) application features
+### (intentionally overly complicated) application features
 
 * Gulp automation
 * Express server
 * Mustache templating
 * SASS styling
 * Browserif[ied] CommonJS
+
+### installation
+
+```sh
+$ git clone git@github.com:jeffborders/craption.git craption
+$ cd craption
+$ npm install
+$ gulp
+```
