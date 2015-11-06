@@ -16,8 +16,8 @@
 * Gulp automation
 * Express server
 * Mustache templating
-* SASS styling
-* Browserif[ied] CommonJS
+* SASS styling (SCSS)
+* CommonJS with Webpack
 
 ### installation
 

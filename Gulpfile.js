@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	autoPrefixer = require('gulp-autoprefixer'),
 	cssLint = require('gulp-csslint'),
 	minifyCss = require('gulp-minify-css'),
-	browserify = require('gulp-browserify'),
+	webpack = require('gulp-webpack'),
+	named = require('vinyl-named'),
 	jsHint = require('gulp-jshint'),
 	babel = require('gulp-babel'),
 	uglify = require('gulp-uglify');
@@ -29,10 +30,8 @@ gulp
 			.src(['lib/**/*.js'])
 			.pipe(babel())
 			.pipe(jsHint())
-			.pipe(browserify({
-				insertGlobals: true,
-				debug: true
-			}))
+			.pipe(named())
+			.pipe(webpack())
 			.pipe(uglify())
 			.pipe(gulp.dest('dist/js'));
 	})
