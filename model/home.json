@@ -1,3 +1,80 @@
 {
-	"name" : "home page."
+	"name" : "home page.",
+	"title" : "#craptionthegame",
+	"subtitle" : "a card game that pairs your witty captions to hilarious pics",
+	"epic" : "\/img\/chels-with-cards.jpg",
+	"kickstarter" : {
+		"link" : "http://kickstarter.com",
+		"message" : "Support us on Kickstarter"
+	},
+	"mediaKit": {
+		"message" : "download our media kit",
+		"link" : "docs/craptionthegame_mediakit.docx"
+	},
+	"cards" : [
+		{
+			"name" : "Adam getting ready for prom",
+			"src" : "img/card-adam-prom.jpg",
+			"craptions" : [
+				"Define: Ridin' dirty",
+				"Who said prom had to be fancy?",
+				"I will show you the world..."
+			]
+		},
+		{
+			"name" : "Dog yawning",
+			"src" : "img/card-dog-yawn.jpg",
+			"craptions" : [
+				"Morning breath is a bitch... literally",
+				"Aaahsevenahhh #lionking",
+				"I can fit that bone-r in my mouth"
+			]
+		},
+		{
+			"name" : "Tom dressed as a clown",
+			"src" : "img/card-tom-clown.jpg",
+			"craptions" : [
+				"College was a rough 10 years",
+				"Trick or treat? Please pick treat",
+				"Beetlejuice's cousin, Bobojuice"
+			]
+		}
+	],
+	"examples" : [
+		{
+			"link" : "http://instagram.com/betches",
+			"handle" : "@betches"
+		},
+		{
+			"link" : "http://instagram.com/fuckjerry",
+			"handle" : "@fuckjerry"
+		},
+		{
+			"link" : "http://instagram.com/boywithnojob",
+			"handle" : "@boywithnojob"
+		},
+		{
+			"link" : "http://instagram.com/girlwithnojob",
+			"handle" : "@girlwithnojob"
+		}
+	],
+	"socialMedia": [
+		{
+			"link": "http://twitter.com",
+			"name" : "twitter"
+		},
+		{
+			"link": "http://instagram.com",
+			"name" : "instagram"
+		},
+		{
+			"link": "http://facebook.com",
+			"name" : "facebook"
+		},
+		{
+			"link": "http://youtube.com",
+			"name" : "youtube"
+		}
+	]
+	
 }

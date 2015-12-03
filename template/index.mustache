@@ -8,8 +8,104 @@
 		<script src="/dist/js/home.js"></script>
 	</head>
 	<body>
-		<div>
-			{{name}}
-		</div>
+		<section class="container" id="header-container">
+			<div class="content">
+				<h1>{{title}}</h1>
+				<h3>{{subtitle}}</h3>
+				{{#kickstarter}}
+					<h3><a href="{{link}}">{{message}}</a></h3>
+				{{/kickstarter}}
+			</div>
+		</section>
+		<section class="container" id="epic-container">
+			<img src="{{epic}}" alt="{{title}}: {{subtitle}}" />
+		</section>
+		<section class="container" id="wtf-container">
+			<div class="content">
+				<h2>wtf is a craption?</h2>
+				<p>
+					A craption is a witty caption added to a ridiculous pic from a social media platform that is so hilarious friends start snorting with laughter. - Me
+				</p>
+				<a href="#" class="button-link">watch our video</a>
+			</div>
+			<img src="img/hand-and-phone.png" alt="hand and phone" id="hand-and-phone-pic" />
+		</section>
+		<section class="container" id="how-does-it-work-container">
+			<div class="content">
+				<h2>so how does it&nbsp;work?</h2>
+				<p>
+					The object of the game is create the wittiest caption for each picture in the deck and get your friends laughing so hard they choose your #craption.
+				</p>
+				<p>
+					It's a unique card game because it uses social media users to generate its content. In other words, YOU create the game by posting YOUR funny pics and tagging @craptionthegame or sending them directly to us!
+				</p>
+				<a href="#" class="button-link">download full instructions</a>
+			</div>
+		</section>
+		<section class="container" id="example-container">
+			<div class="content">
+				<h2>um, still don't get&nbsp;it?</h2>
+				<p>
+					Below are real cards with example #craptions that were created during our first pilot game.
+ 				</p>
+ 				<p>
+					For more caption inspiration, follow these extremely popular and inappropriate personalities: {{#examples}}<a href="{{link}}">{{handle}}</a> {{/examples}}.
+				</p>
+				{{#cards}}
+					<div class="card">
+						<img src="{{src}}" alt="{{name}}" />
+						<div class="card-text">
+							{{#craptions}}
+								<span>{{{.}}}</span>
+							{{/craptions}}
+						</div>
+					</div>
+				{{/cards}}
+			</div>
+		</section>
+		<section class="container" id="give-back-container">
+			<div class="content">
+				<h2>let's do some&nbsp;good</h2>
+				<p>
+					#craptionthegame will launch on Kickstarter in Fall/Winter 2015 as a social enterprise venture.
+ 				</p>
+ 				<p>
+					What does that mean? If #craption is fully-funded and has any excess profit, a guaranteed 5% of the profit will be donated back to a non-profit organization.
+				</p>
+				<a href="#" class="button-link">support us on kickstarter</a>
+			</div>
+		</section>
+		<section class="container" id="contact-container">
+			<div class="content">
+				<div class="left-content">
+					<h3>post your pics...</h3>
+					{{#socialMedia}}
+						<a href="{{link}}"><img src="img/icon-{{name}}.png" alt="{{name}}" /></a>
+					{{/socialMedia}}
+					<br /><br />
+					{{#mediaKit}}
+						<a href="{{link}}" class="button-link">{{message}}</a>
+					{{/mediaKit}}
+				</div>
+				<div class="right-content">
+					<h3>wanna chat?</h3>
+					<form id="contact-form" action="#" novalidate>
+						<input autocomplete="off" type="text" name="contact-name" placeholder="Name" />
+						<input autocomplete="off" type="email" name="contact-email" placeholder="Email" />
+						<input autocomplete="off" type="text" name="contact-subject" placeholder="Subject" />
+						<textarea name="contact-message" placeholder="Message"></textarea>
+						<input type="submit" value="Send" />
+					</form>
+				</div>
+			</div>
+			<div class="content">
+				<a href="#" id="back-to-top">Back to Top</a>
+			</div>
+		</section>
+		<section class="container" id="footer-container">
+			<div class="content">
+				&copy; 2015 by #craptionthegame
+			</div>
+		</section>
 	</body>
 </html>

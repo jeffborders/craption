@@ -1,14 +1,14 @@
-var gulp = require('gulp'),
-	connect = require('gulp-connect'),
-	sass = require('gulp-sass'),
-	autoPrefixer = require('gulp-autoprefixer'),
-	cssLint = require('gulp-csslint'),
-	minifyCss = require('gulp-minify-css'),
-	webpack = require('gulp-webpack'),
-	named = require('vinyl-named'),
-	jsHint = require('gulp-jshint'),
-	babel = require('gulp-babel'),
-	uglify = require('gulp-uglify');
+var gulp = require('gulp');
+var connect = require('gulp-connect');
+var sass = require('gulp-sass');
+var autoPrefixer = require('gulp-autoprefixer');
+var cssLint = require('gulp-csslint');
+var minifyCss = require('gulp-minify-css');
+var webpack = require('gulp-webpack');
+var named = require('vinyl-named');
+var jsHint = require('gulp-jshint');
+var babel = require('gulp-babel');
+var uglify = require('gulp-uglify');
 
 gulp
 	.task('css', function() {
@@ -39,7 +39,6 @@ gulp
 		connect.server({
 			root: [__dirname],
 			port: 3636,
-			livereload: true,
 			middleware: function(connect, opt) {
 				return [
 					require('./app')
