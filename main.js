@@ -6,6 +6,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var app = express();
+var port = normalizePort(process.env.PORT || '3636');
 var server;
 
 // model setup
@@ -131,7 +132,7 @@ app
 		res.render('404', getModel('404'));
 	});
 
-app.set('port', normalizePort(process.env.PORT || '3636'));
+app.set('port', port);
 
 server = http.createServer(app);
 server.listen(port);
