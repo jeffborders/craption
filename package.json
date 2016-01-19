@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "main": "Gulpfile.js",
   "scripts": {
-    "prestart": "npm install",
     "start": "node ./main.js"
   },
   "dependencies": {
