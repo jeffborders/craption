@@ -6,7 +6,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var app = express();
-var port = 3636;
+var port = 3000;
 var server;
 
 // model setup
