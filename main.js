@@ -56,7 +56,7 @@ app
 
 // static file config
 app
-	.use(favicon(__dirname + '/favicon.ico'))
+	// .use(favicon(__dirname + '/favicon.ico'))
 	.use('/', express.static(__dirname));
 
 // post data parsing
