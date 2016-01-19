@@ -116,7 +116,7 @@ app
 		res.render('404', getModel('404'));
 	});
 
-app.set('port', port);
+app.set('port', process.env.PORT || port);
 
 server = http.createServer(app);
 server.listen(port);
