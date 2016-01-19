@@ -6,7 +6,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var app = express();
-var port = 3000;
 var server;
 
 // model setup
@@ -45,6 +44,22 @@ function partials(pattern) {
 	);
 
 	return partials;
+};
+
+function normalizePort(val) {
+	var port = parseInt(val, 10);
+
+	if (isNaN(port)) {
+		// named pipe
+		return val;
+	}
+
+	if (port >= 0) {
+		// port number
+		return port;
+	}
+
+	return false;
 };
 
 // view engine config
@@ -116,7 +131,7 @@ app
 		res.render('404', getModel('404'));
 	});
 
-app.set('port', process.env.PORT || port);
+app.set('port', normalizePort(process.env.PORT || '3636'));
 
 server = http.createServer(app);
 server.listen(port);
