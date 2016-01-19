@@ -1,5 +1,5 @@
 {
-	"name" : "home page.",
+	"name" : "#craptionthegame",
 	"title" : "#craptionthegame",
 	"subtitle" : "a card game that pairs your witty captions to hilarious pics",
 	"epic" : "\/img\/chels-with-cards.jpg",
@@ -60,19 +60,19 @@
 	],
 	"socialMedia": [
 		{
-			"link": "http://twitter.com",
+			"link": "http://twitter.com/craptionthegame",
 			"name" : "twitter"
 		},
 		{
-			"link": "http://instagram.com",
+			"link": "http://instagram.com/craptionthegame",
 			"name" : "instagram"
 		},
 		{
-			"link": "http://facebook.com",
+			"link": "http://facebook.com/craptionthegame",
 			"name" : "facebook"
 		},
 		{
-			"link": "http://youtube.com",
+			"link": "https://www.youtube.com/channel/UCZu-6l5Cjw7vvV1aktvpBww",
 			"name" : "youtube"
 		}
 	]

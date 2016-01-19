@@ -18,11 +18,13 @@ $craption-color-link: $craption-color-light-green;
 
 // craption spacing vars
 $craption-spacing-horizontal-lg: 40px;
+$craption-spacing-horizontal-xlg: ($craption-spacing-horizontal-lg * 2);
 $craption-spacing-horizontal-md: ($craption-spacing-horizontal-lg / 2);
 $craption-spacing-horizontal-sm: ($craption-spacing-horizontal-md / 2);
 $craption-spacing-horizontal-xs: ($craption-spacing-horizontal-sm / 2);
 
 $craption-spacing-vertical-lg: 40px;
+$craption-spacing-vertical-xlg: ($craption-spacing-vertical-lg * 2);
 $craption-spacing-vertical-md: ($craption-spacing-vertical-lg / 2);
 $craption-spacing-vertical-sm: ($craption-spacing-vertical-md / 2);
 $craption-spacing-vertical-xs: ($craption-spacing-vertical-sm / 2);
@@ -91,10 +93,10 @@ $craption-breakpoint-desktop: 800px;
 		color: $craption-color-white;
 		margin: 0 auto;
 		max-width: $craption-max-width;
-		padding: $craption-spacing-vertical-lg $craption-spacing-horizontal-md;
+		padding: $craption-spacing-vertical-xlg $craption-spacing-horizontal-md;
 
 		h2 {
-			font-size: 2.4em;
+			font-size: 3.4em;
 			font-weight: bold;
 			margin: 0 0 $craption-spacing-vertical-lg 0;
 		}
@@ -109,10 +111,30 @@ $craption-breakpoint-desktop: 800px;
 	h1 {
 		font-size: 56px;
 		font-size: 10vmin;
+		font-weight: bold;
 	}
 	h3 {
 		font-size: 26px;
 		font-size: 4.5vmin;
+
+		&.kickstarter-header {
+			line-height: 100px;
+
+			@media (max-width: $craption-breakpoint-tablet) {
+				line-height: 2em;
+			}
+		}
+	}
+
+	img {
+		position: absolute;
+		margin: -110px 0 0 200px;
+
+		@media (max-width: $craption-breakpoint-tablet) {
+			margin: 0 0 0 0;
+			position: relative;
+			display: inline-block;
+		}
 	}
 }
 #epic-container {
@@ -158,7 +180,7 @@ $craption-breakpoint-desktop: 800px;
 #example-container {
 	.card {
 		float: left;
-		margin: $craption-spacing-vertical-sm 1%;
+		margin: $craption-spacing-vertical-sm 1% $craption-spacing-vertical-xlg;
 		width: 30%;
 		position: relative;
 
@@ -207,10 +229,56 @@ $craption-breakpoint-desktop: 800px;
 	}
 }
 
+#give-back-container .content {
+	img {
+		float: left;
+		margin: 0 20px 0 0;
+		max-width: 30%;
+
+		@media (max-width: $craption-breakpoint-mobile) {
+			display: none;
+		}	
+	}
+	div {
+		overflow: hidden;
+	}
+}
+
 #contact-container {
+	#form-feedback {
+		clear: both;
+		float: left;
+		margin-top: 10px;
+		width: 70%;
+		box-sizing: border-box;
+
+		@media (max-width: $craption-breakpoint-mobile) {
+			width: 100%;
+		}
+	}
+	.error, .success { padding: 10px 20px; }
+	.error {
+		background: #fdd;
+		color: #e00;
+		border: 1px dashed #e00;
+	}
+
+	.success {
+		background: #dfd;
+		color: #0a0;
+		border: 1px dashed #0a0;
+	}
+
 	.left-content, .right-content { 
 		float: left; 
 		width: 50%;
+
+		@media (max-width: $craption-breakpoint-mobile) {
+			clear: both;
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 
 	input, textarea {
@@ -223,6 +291,10 @@ $craption-breakpoint-desktop: 800px;
 		padding: $craption-spacing-vertical-sm $craption-spacing-horizontal-sm;
 		margin: 0 0 $craption-spacing-vertical-xs;
 		width: 65%;
+
+		@media (max-width: $craption-breakpoint-mobile) {
+			width: 95%;
+		}
 	}
 
 	textarea {
@@ -231,6 +303,11 @@ $craption-breakpoint-desktop: 800px;
 		max-height: 400px;
 		max-width: 65%;
 		min-width: 65%;
+
+		@media (max-width: $craption-breakpoint-mobile) {
+			max-width: 95%;
+			min-width: 95%;
+		}
 	}
 
 	#back-to-top {

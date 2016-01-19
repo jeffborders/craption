@@ -2,7 +2,7 @@
 <html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
-		<title>{{pkg.name}} - {{name}}</title>
+		<title>{{name}}</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" href="/dist/css/main.css" />
 		<script src="/dist/js/home.js"></script>
@@ -13,7 +13,8 @@
 				<h1>{{title}}</h1>
 				<h3>{{subtitle}}</h3>
 				{{#kickstarter}}
-					<h3><a href="{{link}}">{{message}}</a></h3>
+					<h3 class="kickstarter-header"><a href="{{link}}">{{message}}</a></h3>
+					<a href="{{link}}"><img src="img/kickstarter-logo.png" alt="{{message}}" /></a>
 				{{/kickstarter}}
 			</div>
 		</section>
@@ -39,7 +40,7 @@
 				<p>
 					It's a unique card game because it uses social media users to generate its content. In other words, YOU create the game by posting YOUR funny pics and tagging @craptionthegame or sending them directly to us!
 				</p>
-				<a href="#" class="button-link">download full instructions</a>
+				<a href="docs/craption-rules.pdf" target="_blank" class="button-link">download full instructions</a>
 			</div>
 		</section>
 		<section class="container" id="example-container">
@@ -65,26 +66,30 @@
 		</section>
 		<section class="container" id="give-back-container">
 			<div class="content">
-				<h2>let's do some&nbsp;good</h2>
-				<p>
-					#craptionthegame will launch on Kickstarter in Fall/Winter 2015 as a social enterprise venture.
- 				</p>
- 				<p>
-					What does that mean? If #craption is fully-funded and has any excess profit, a guaranteed 5% of the profit will be donated back to a non-profit organization.
-				</p>
-				<a href="#" class="button-link">support us on kickstarter</a>
+				<img src="img/globe.png" alt="globe" />
+				<div>
+					<h2>let's do some&nbsp;good</h2>
+					<p>
+						#craptionthegame will launch on Kickstarter in Fall/Winter 2015 as a social enterprise venture.
+	 				</p>
+	 				<p>
+						What does that mean? If #craption is fully-funded and has any excess profit, a guaranteed 5% of the profit will be donated back to a non-profit organization.
+					</p>
+					<a href="#" class="button-link">support us on kickstarter</a>
+				</div>
 			</div>
 		</section>
 		<section class="container" id="contact-container">
 			<div class="content">
+				<h2>contact us</h2>
 				<div class="left-content">
 					<h3>post your pics...</h3>
 					{{#socialMedia}}
-						<a href="{{link}}"><img src="img/icon-{{name}}.png" alt="{{name}}" /></a>
+						<a href="{{link}}" target="_blank"><img src="img/icon-{{name}}.png" alt="{{name}}" /></a>
 					{{/socialMedia}}
 					<br /><br />
 					{{#mediaKit}}
-						<a href="{{link}}" class="button-link">{{message}}</a>
+						<a href="{{link}}" target="_blank" class="button-link">{{message}}</a>
 					{{/mediaKit}}
 				</div>
 				<div class="right-content">
@@ -96,6 +101,7 @@
 						<textarea name="contact-message" placeholder="Message"></textarea>
 						<input type="submit" value="Send" />
 					</form>
+					<p id="form-feedback"></p>
 				</div>
 			</div>
 			<div class="content">
@@ -104,7 +110,7 @@
 		</section>
 		<section class="container" id="footer-container">
 			<div class="content">
-				&copy; 2015 by #craptionthegame
+				&copy;2015 by #craptionthegame
 			</div>
 		</section>
 	</body>

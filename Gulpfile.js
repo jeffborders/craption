@@ -38,7 +38,7 @@ gulp
 	.task('connect', function() {
 		connect.server({
 			root: [__dirname],
-			port: 3636,
+			port: 8081,
 			middleware: function(connect, opt) {
 				return [
 					require('./app')
